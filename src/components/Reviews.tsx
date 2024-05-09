@@ -105,7 +105,7 @@ const Reviews = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious/>
+        <CarouselPrevious />
         <CarouselNext />
       </Carousel>
     </div>
