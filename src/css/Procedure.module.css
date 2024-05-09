@@ -7,4 +7,5 @@
     padding: 100px;
     background-position-x: 200px ;
     background-position-y:350px ;
+    overflow: hidden;
 }

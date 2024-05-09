@@ -1,9 +1,7 @@
 import style from "../css/Hero.module.css";
 import CityCard from "./CityCard";
-import { BackgroundGradient } from "./ui/background-gradient";
 import { CiLocationOn } from "react-icons/ci";
 import { Button } from "./ui/button";
-// import { Button } from "@/components/ui/button"
 
 const Hero = () => {
   return (

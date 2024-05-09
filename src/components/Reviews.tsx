@@ -17,6 +17,7 @@ import {
 
 import googlelogo from "../Assets/googlelogo.svg";
 
+
 const Reviews = () => {
   const data = [
     {
@@ -79,25 +80,32 @@ const Reviews = () => {
               className="pl-1 md:basis-1/2 lg:basis-1/3"
             >
               <div className="p-1">
-                <Card key={index}>
+                <Card key={index} className="w-[90%] rounded-[50px] h-[400px] overflow-ellipsis justify-center">
+                  <div className="flex flex-col">
                   <CardHeader>
                     <div className="flex justify-between p-1">
-                      <div>
-                    <CardTitle className="text-black">{x.name}</CardTitle>
-                    <CardDescription>{x.about}</CardDescription>
+                      <div className="flex flex-col gap-1">
+                        <CardTitle className="text-black">{x.name}</CardTitle>
+                        <CardDescription>{x.about}</CardDescription>
                       </div>
-                    <img src={googlelogo} alt="google" className="rounded size-[40px]" />
+                      <img
+                        src={googlelogo}
+                        alt="google"
+                        className="rounded size-[40px] ml-2"
+                      />
                     </div>
                   </CardHeader>
-                  <CardContent className="flex aspect-square items-start justify-center p-[40px] text-lg text-[#000]">
+                  <CardContent className="w-full text-lg text-[#000] mt-[10px]">
                     {x.review}
                   </CardContent>
+                  </div>
+                  
                 </Card>
               </div>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
+        <CarouselPrevious/>
         <CarouselNext />
       </Carousel>
     </div>
@@ -105,51 +113,3 @@ const Reviews = () => {
 };
 
 export default Reviews;
-
-// return (
-//   <div className={style.container} id="reviews">
-//     <Carousel className="w-[80%]">
-//       <CarouselContent className="ml-1">
-//         {Array.from({ length: 8 }).map((_, index) => (
-//           <CarouselItem
-//             key={index}
-//             className="pl-1 md:basis-1/2 lg:basis-1/3"
-//           >
-//             <div className="p-1">
-//               {data.map((x, index) => {
-//                 return (
-//                   <Card key={index}>
-//                     <CardHeader>
-//                       <CardTitle className="text-black">{x.name}</CardTitle>
-//                       <CardDescription>{x.about}</CardDescription>
-//                     </CardHeader>
-//                     <CardContent className="flex aspect-square items-center justify-center p-6">
-//                       {x.review}
-//                     </CardContent>
-//                   </Card>
-//                 );
-//               })}
-//             </div>
-//           </CarouselItem>
-//         ))}
-//       </CarouselContent>
-//       <CarouselPrevious />
-//       <CarouselNext />
-//     </Carousel>
-//   </div>
-// );
-// };
-
-// export default Reviews;
-
-{
-  /* <Card key={index}>
-                      <CardHeader>
-                        <CardTitle className="text-black">{x.name}</CardTitle>
-                        <CardDescription>{x.about}</CardDescription>
-                      </CardHeader>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        {x.review}
-                      </CardContent>
-                    </Card> */
-}
