@@ -81,9 +81,13 @@ const Reviews = () => {
               <div className="p-1">
                 <Card key={index}>
                   <CardHeader>
+                    <div className="flex justify-between p-1">
+                      <div>
                     <CardTitle className="text-black">{x.name}</CardTitle>
                     <CardDescription>{x.about}</CardDescription>
-                    <img src={googlelogo} alt="google" className="rounded" />
+                      </div>
+                    <img src={googlelogo} alt="google" className="rounded size-[40px]" />
+                    </div>
                   </CardHeader>
                   <CardContent className="flex aspect-square items-start justify-center p-[40px] text-lg text-[#000]">
                     {x.review}
