@@ -1,21 +1,29 @@
-import { Button } from "@/components/ui/button"
 
+import logo from "../Assets/dasalogo.svg";
+import style from "../css/Navbar.module.css";
 
 const Navbar = () => {
+
+  const scrollToSection = (id: any) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <div className="flex flex-wrap gap-2 justify-between text-sm font-semibold p-9 mx-[120px] rounded-md">
-      <span>
-        <img src="/home/names_aditya/Desktop/react-portfolio/portfolio/src/Assets/dasalogo.png" alt="logo" />
-      </span>
-      <ul className="flex flex-wrap flex-row gap-8 mr-8 items-center justify-center">
-        <Button> Here</Button>
-        <li>Home</li>
-        <li>Reviews</li>
-        <li>Gallery</li>
-        <li>Contact</li>
-        <li>Travel</li>
+    <nav className="flex flex-wrap gap-2 justify-between font-semibold pb-[30px] pt-[68px] mr-[144px] ml-160px mx-[120px] rounded-md">
+      <a href="#" className={style.logo}>
+        <img src={logo} alt="logo" />
+      </a>
+      <ul className="flex flex-row gap-8 mx-[5px] items-center justify-center font-light tracking-wider">
+        <li className={style.li}><a href="#" onClick={() => scrollToSection('home')}>Home</a></li>
+        <li className={style.li}><a href="#" onClick={() => scrollToSection('travel')}>Travel</a></li>
+        <li className={style.li}><a href="#" onClick={() => scrollToSection('reviews')}>Reviews</a></li>
+        <li className={style.li}><a href="#" onClick={() => scrollToSection('gallery')}>Gallery</a></li>
+        <li className={style.li}><a href="#" onClick={() => scrollToSection('contact')}>Contact</a></li>
       </ul>
-    </div>
+    </nav>
   );
 };
 

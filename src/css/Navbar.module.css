@@ -1,0 +1,23 @@
+.li:hover{
+    border-bottom: 3px solid;
+    border-color: #F9076D;
+    cursor: pointer;
+}
+
+
+*{
+    color: #ffffff
+}
+
+.logo{
+    transition: transform 0.5s ease;
+}
+
+
+.logo:hover{
+    scale: 1.25;
+    transform: rotate(360deg);
+    transition: 0.5s;
+    animation-direction: reverse;
+}
+

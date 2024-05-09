@@ -1,0 +1,10 @@
+.container{
+    background-color: #F5F5F5;
+    background-repeat:no-repeat;
+    width: auto;
+    height: 130vh;
+    color: #000000;
+    padding: 100px;
+    background-position-x: 200px ;
+    background-position-y:350px ;
+}

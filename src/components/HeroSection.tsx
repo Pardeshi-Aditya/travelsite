@@ -1,21 +1,22 @@
 import Navbar from "./Navbar";
 import Hero from "./Hero";
+import parisimage from "../Assets/paris.jpg";
 
 const HeroSection = () => {
   return (
-    <div className="relative h-screen">
+    <div className="relative h-screen" id="home">
       {/* Background image */}
       <div
         className="absolute top-0 left-0 w-full h-full bg-cover bg-center z-10"
         style={{
-          backgroundImage:
-            'url("/home/names_aditya/Desktop/react-portfolio/portfolio/src/Assets/paris.jpg")',
+          backgroundImage: `url(${parisimage})`,
         }}
-      >HERE</div>
+      ></div>
+
       {/* Overlay with background color and opacity */}
-      <div className="absolute z-20 top-0 left-0 w-full h-full bg-[#253B5A] bg-opacity-50"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[#253B5A] bg-opacity-50 z-20"></div>
       {/* Content */}
-      <div className="relative z-30">
+      <div className="top-0 left-0 relative z-30">
         <Navbar />
         <Hero />
       </div>

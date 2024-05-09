@@ -4,17 +4,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  color: #ffffff;
-  /* background-color: #010101; */
-  letter-spacing: 0.06em;
   font-family: "Inter", sans-serif;
-  /* font-optical-sizing: auto; */
-  font-weight: 300;
-  /* font-style: light; */
-}
-
-div{
-  /* background-color: #010101; */
 }
 
 a{
